@@ -322,7 +322,7 @@
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEVELOPMENT_TEAM = 573SBC7C4C;
-				INFOPLIST_FILE = wv4test/Info.plist;
+				INFOPLIST_FILE = scInject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = 573SBC7C4C;
-				INFOPLIST_FILE = wv4test/Info.plist;
+				INFOPLIST_FILE = scInject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -58,23 +58,27 @@ class FirstViewController: UIViewController, WKNavigationDelegate, WKScriptMessa
             let scatterInjectorSource = try? String(contentsOfFile: scatterInjectorPath, encoding: String.Encoding.utf8) else { return }
         
 //            print(scriptSource1)
-        let script1 = WKUserScript(source: scatterHandlerSource, injectionTime: .atDocumentStart, forMainFrameOnly: false)
-        userContentController.addUserScript(script1)
+        let scatterHandlerScript = WKUserScript(source: scatterHandlerSource, injectionTime: .atDocumentStart, forMainFrameOnly: false)
+        userContentController.addUserScript(scatterHandlerScript)
 //                    print(scriptSource2)
-        let script2 = WKUserScript(source: scatterInjectorSource, injectionTime: .atDocumentStart, forMainFrameOnly: false)
-        userContentController.addUserScript(script2)
+        let scatterInjectorScript = WKUserScript(source: scatterInjectorSource, injectionTime: .atDocumentStart, forMainFrameOnly: false)
+        userContentController.addUserScript(scatterInjectorScript)
         
+        
+        let onloadScript = WKUserScript(
+            source: "document.dispatchEvent(new CustomEvent('scatterLoaded'));",
+            injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        userContentController.addUserScript(onloadScript)
+
 //        let scriptSource = "window.webkit.messageHandlers.scatterHandler.postMessage(`{\"type\":\"test\",\"resolver\":\"123123\"}`);"
         //"const scatterHandler = new ScatterHandler({});"
 //        "window.webkit.messageHandlers.scatterHandler.postMessage(`{\"type\":\"getOrRequestIdentity\",\"payload\":{\"network\":{},\"fields\":{\"accounts\":[{\"blockchain\":\"eos\",\"protocol\":\"https\",\"host\":\"proxy.eosnode.tools\",\"port\":443,\"chainId\":\"aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906\"}]},\"domain\":\"betx.fun\"},\"resolver\":\"844228313308688439228608\",\"domain\":\"betx.fun\",\"from\":\"injected\"}`);"
-        let testScript = "window.webkit.messageHandlers.scatterHandler.postMessage(`{\"type\":\"test\",\"resolver\":\"123\"}`);"
+        let testScriptSrc = "window.webkit.messageHandlers.scatterHandler.postMessage(`{\"type\":\"test\",\"resolver\":\"123\"}`);"
 
         // Instantiate a WKUserScript object and specify when you’d like to inject your script
         // and whether it’s for all frames or the main frame only.
-        let onloadScript = WKUserScript(
-            source: "document.dispatchEvent(new CustomEvent('scatterLoaded'));" + testScript,
-            injectionTime: .atDocumentEnd, forMainFrameOnly: false)
-        userContentController.addUserScript(onloadScript)
+        let testScript = WKUserScript(source: testScriptSrc ,injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        userContentController.addUserScript(testScript)
 
         
         let config = WKWebViewConfiguration()

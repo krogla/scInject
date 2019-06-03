@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A386570D22A51C7100B3C533 /* handler.js in Resources */ = {isa = PBXBuildFile; fileRef = A386570B22A51C7000B3C533 /* handler.js */; };
+		A386570E22A51C7100B3C533 /* injector.js in Resources */ = {isa = PBXBuildFile; fileRef = A386570C22A51C7100B3C533 /* injector.js */; };
 		A3F5B14922A1072900C9EAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B14822A1072900C9EAD9 /* AppDelegate.swift */; };
 		A3F5B14B22A1072900C9EAD9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B14A22A1072900C9EAD9 /* FirstViewController.swift */; };
 		A3F5B14D22A1072900C9EAD9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B14C22A1072900C9EAD9 /* SecondViewController.swift */; };
@@ -15,11 +17,11 @@
 		A3F5B15522A1072A00C9EAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F5B15322A1072A00C9EAD9 /* LaunchScreen.storyboard */; };
 		A3F5B15E22A10D5800C9EAD9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F5B15D22A10D5800C9EAD9 /* WebKit.framework */; };
 		A3F5B16022A117FE00C9EAD9 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F5B15F22A117FE00C9EAD9 /* LogController.swift */; };
-		A3F5B19022A1973C00C9EAD9 /* injector.js in Resources */ = {isa = PBXBuildFile; fileRef = A3F5B18E22A1973C00C9EAD9 /* injector.js */; };
-		A3F5B19122A1973C00C9EAD9 /* handler.js in Resources */ = {isa = PBXBuildFile; fileRef = A3F5B18F22A1973C00C9EAD9 /* handler.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A386570B22A51C7000B3C533 /* handler.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handler.js; sourceTree = "<group>"; };
+		A386570C22A51C7100B3C533 /* injector.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injector.js; sourceTree = "<group>"; };
 		A3F5B14522A1072900C9EAD9 /* scInject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scInject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F5B14822A1072900C9EAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F5B14A22A1072900C9EAD9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +32,6 @@
 		A3F5B15622A1072A00C9EAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3F5B15D22A10D5800C9EAD9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A3F5B15F22A117FE00C9EAD9 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
-		A3F5B18E22A1973C00C9EAD9 /* injector.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = injector.js; path = ../../../excatter/dist/injector.js; sourceTree = "<group>"; };
-		A3F5B18F22A1973C00C9EAD9 /* handler.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = handler.js; path = ../../../excatter/dist/handler.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 		A3F5B16722A11DCD00C9EAD9 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				A3F5B18F22A1973C00C9EAD9 /* handler.js */,
-				A3F5B18E22A1973C00C9EAD9 /* injector.js */,
+				A386570B22A51C7000B3C533 /* handler.js */,
+				A386570C22A51C7100B3C533 /* injector.js */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -154,11 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F5B19022A1973C00C9EAD9 /* injector.js in Resources */,
 				A3F5B15522A1072A00C9EAD9 /* LaunchScreen.storyboard in Resources */,
-				A3F5B19122A1973C00C9EAD9 /* handler.js in Resources */,
 				A3F5B15222A1072A00C9EAD9 /* Assets.xcassets in Resources */,
 				A3F5B15022A1072900C9EAD9 /* Main.storyboard in Resources */,
+				A386570D22A51C7100B3C533 /* handler.js in Resources */,
+				A386570E22A51C7100B3C533 /* injector.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
